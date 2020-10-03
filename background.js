@@ -1,12 +1,12 @@
 function MyImageClick(info, tab){
-    console.log("Clicked an image", info, tab);
+    console.log("Click image", info, tab);
  
 
 chrome.downloads.download({"url": info.srcUrl})
 }
 
 function MyQuoteClick(info, tab){
-    console.log("Clicked an image", info, tab);
+    console.log("Click image", info, tab);
  
    chrome.downloads.download(info.srcUrl)
 
@@ -28,6 +28,6 @@ chrome.contextMenus.create({
 
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse){
     console.log("message", msg)
-    sendResponse({"text": "Received the links"});
+    sendResponse({"text": "Hey I have Received the links"});
 
 })
